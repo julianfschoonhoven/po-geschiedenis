@@ -4,57 +4,96 @@
   <meta charset="UTF-8">
   <title>Geschiedenis Tijdvakken 1 t/m 4</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #fdf6e3, #e4d8c2);
       margin: 0;
       padding: 0;
+      color: #3e2c1c;
     }
+
     header {
-      background: #2c3e50;
-      color: white;
-      padding: 20px;
+      background: #8b5e3c;
+      color: #fff8e7;
+      padding: 30px 20px;
       text-align: center;
+      border-bottom: 5px solid #5a3b24;
+      font-family: 'MedievalSharp', cursive;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 5px 0 0 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
     main {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
       padding: 40px;
     }
+
     .card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+      background: #fff8e7;
+      border: 3px solid #8b5e3c;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+      box-shadow: 8px 8px 20px rgba(0,0,0,0.3);
     }
+
     h2 {
       margin-top: 0;
-      color: #2c3e50;
+      color: #5a3b24;
+      font-family: 'MedievalSharp', cursive;
     }
+
     a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #3498db;
-      color: white;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #d4a373;
+      color: #fff8e7;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
+
     a:hover {
-      background: #2980b9;
+      background: #b97b50;
     }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #8b5e3c;
+      color: #fff8e7;
+      font-size: 0.9em;
+      border-top: 5px solid #5a3b24;
+    }
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Geschiedenis PO - Tijdvakken 1 t/m 4</h1>
-    <p>Verzamelpunt voor alle onderdelen</p>
+    <h1>Geschiedenis PO</h1>
+    <p>Tijdvakken 1 t/m 4</p>
   </header>
+
   <main>
     <div class="card">
       <h2>Tijd van jagers en boeren (tot 3000 v.C.)</h2>
@@ -73,5 +112,9 @@
       <a href="LINK-NAAR-PS-BESTAND" target="_blank">Bekijk project</a>
     </div>
   </main>
+
+  <footer>
+    &copy; 2025 Geschiedenis PO - Tijdvakken 1 t/m 4
+  </footer>
 </body>
 </html>
