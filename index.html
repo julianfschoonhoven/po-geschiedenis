@@ -2,66 +2,79 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Geschiedenis Tijdvakken 1 t/m 4</title>
+  <title>Geschiedenis PO - Tijdvakken 1 t/m 4</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap');
 
     body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom, #fdf6e3, #e4d8c2);
       margin: 0;
-      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fdf6e3;
       color: #3e2c1c;
     }
 
     header {
-      background: #8b5e3c;
+      background: #8b5e3c url('https://i.imgur.com/1nD4n6N.jpg') no-repeat center/cover;
       color: #fff8e7;
-      padding: 30px 20px;
+      padding: 60px 20px;
       text-align: center;
       border-bottom: 5px solid #5a3b24;
       font-family: 'MedievalSharp', cursive;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     }
 
     header h1 {
+      font-size: 3em;
       margin: 0;
-      font-size: 2.5em;
     }
 
     header p {
-      margin: 5px 0 0 0;
-      font-size: 1.2em;
-      font-weight: bold;
+      font-size: 1.4em;
+      margin: 10px 0 0 0;
     }
 
     main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      padding: 40px 20px;
     }
 
-    .card {
-      background: #fff8e7;
+    .tijdvak {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: rgba(255,248,231,0.9);
       border: 3px solid #8b5e3c;
       border-radius: 15px;
-      padding: 25px;
+      overflow: hidden;
       box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
+    .tijdvak:hover {
+      transform: translateY(-5px);
       box-shadow: 8px 8px 20px rgba(0,0,0,0.3);
     }
 
-    h2 {
-      margin-top: 0;
-      color: #5a3b24;
-      font-family: 'MedievalSharp', cursive;
+    .tijdvak img {
+      width: 150px;
+      object-fit: contain;
+      margin: 20px;
     }
 
-    a {
+    .tijdvak-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .tijdvak h2 {
+      margin-top: 0;
+      font-family: 'MedievalSharp', cursive;
+      color: #5a3b24;
+      font-size: 1.8em;
+    }
+
+    .tijdvak a {
       display: inline-block;
       margin-top: 15px;
       padding: 12px 20px;
@@ -73,7 +86,7 @@
       transition: background 0.3s;
     }
 
-    a:hover {
+    .tijdvak a:hover {
       background: #b97b50;
     }
 
@@ -86,6 +99,15 @@
       border-top: 5px solid #5a3b24;
     }
 
+    @media(max-width: 800px){
+      .tijdvak {
+        flex-direction: column;
+        align-items: center;
+      }
+      .tijdvak img {
+        margin: 20px 0 0 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -95,22 +117,42 @@
   </header>
 
   <main>
-    <div class="card">
-      <h2>Tijd van jagers en boeren (tot 3000 v.C.)</h2>
-      <a href="https://app.genially.com/editor/68bc5a2ab8034b7098c001a7" target="_blank">Bekijk project</a>
+    <!-- Tijd van jagers en boeren -->
+    <div class="tijdvak">
+      <img src="https://i.imgur.com/k5WvDkQ.png" alt="Prehistorie icoon">
+      <div class="tijdvak-content">
+        <h2>Tijd van jagers en boeren (tot 3000 v.C.)</h2>
+        <a href="https://app.genially.com/editor/68bc5a2ab8034b7098c001a7" target="_blank">Bekijk project</a>
+      </div>
     </div>
-    <div class="card">
-      <h2>Tijd van Grieken en Romeinen (3000 v.C. - 500)</h2>
-      <a href="LINK-NAAR-COMIC" target="_blank">Bekijk project</a>
+
+    <!-- Tijd van Grieken en Romeinen -->
+    <div class="tijdvak">
+      <img src="https://i.imgur.com/z6gS2kx.png" alt="Romeinen icoon">
+      <div class="tijdvak-content">
+        <h2>Tijd van Grieken en Romeinen (3000 v.C. - 500)</h2>
+        <a href="LINK-NAAR-COMIC" target="_blank">Bekijk project</a>
+      </div>
     </div>
-    <div class="card">
-      <h2>Tijd van monniken en ridders (500-1000)</h2>
-      <a href="LINK-NAAR-CANVA" target="_blank">Bekijk project</a>
+
+    <!-- Tijd van monniken en ridders -->
+    <div class="tijdvak">
+      <img src="https://i.imgur.com/1L6gTzX.png" alt="Ridders icoon">
+      <div class="tijdvak-content">
+        <h2>Tijd van monniken en ridders (500-1000)</h2>
+        <a href="LINK-NAAR-CANVA" target="_blank">Bekijk project</a>
+      </div>
     </div>
-    <div class="card">
-      <h2>Tijd van steden en staten (1000-1500)</h2>
-      <a href="LINK-NAAR-PS-BESTAND" target="_blank">Bekijk project</a>
+
+    <!-- Tijd van steden en staten -->
+    <div class="tijdvak">
+      <img src="https://i.imgur.com/v2O1a3K.png" alt="Steden icoon">
+      <div class="tijdvak-content">
+        <h2>Tijd van steden en staten (1000-1500)</h2>
+        <a href="LINK-NAAR-PS-BESTAND" target="_blank">Bekijk project</a>
+      </div>
     </div>
+
   </main>
 
   <footer>
