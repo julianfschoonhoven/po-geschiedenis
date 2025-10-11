@@ -41,7 +41,7 @@
 
     .tijdvak {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column; /* past zich aan zonder afbeelding */
       background-color: rgba(255,248,231,0.9);
       border: 3px solid #8b5e3c;
       border-radius: 15px;
@@ -49,24 +49,6 @@
       box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
       transition: transform 0.3s, box-shadow 0.3s;
       align-items: center;
-    }
-
-    .tijdvak:hover {
-      transform: translateY(-5px);
-      box-shadow: 8px 8px 20px rgba(0,0,0,0.3);
-    }
-
-    .tijdvak img {
-      width: 220px; /* groter en goed zichtbaar */
-      height: auto;
-      object-fit: cover;
-      margin: 20px;
-      border-radius: 10px;
-      border: 2px solid #5a3b24;
-    }
-
-    .tijdvak-content {
-      flex: 1;
       padding: 20px;
     }
 
@@ -75,6 +57,7 @@
       font-family: 'MedievalSharp', cursive;
       color: #5a3b24;
       font-size: 1.8em;
+      text-align: center;
     }
 
     .tijdvak a {
@@ -101,17 +84,6 @@
       font-size: 0.9em;
       border-top: 5px solid #5a3b24;
     }
-
-    @media(max-width: 800px){
-      .tijdvak {
-        flex-direction: column;
-        align-items: center;
-      }
-      .tijdvak img {
-        margin: 20px 0 0 0;
-        width: 80%; /* past zich beter aan kleinere schermen aan */
-      }
-    }
   </style>
 </head>
 <body>
@@ -121,42 +93,25 @@
   </header>
 
   <main>
-    <!-- Tijd van jagers en boeren -->
     <div class="tijdvak">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Cave_painting_lascaux.jpg" alt="Grottekeningen uit de prehistorie">
-      <div class="tijdvak-content">
-        <h2>Tijd van jagers en boeren (tot 3000 v.C.)</h2>
-        <a href="https://app.genially.com/editor/68bc5a2ab8034b7098c001a7" target="_blank">Bekijk project</a>
-      </div>
+      <h2>Tijd van jagers en boeren (tot 3000 v.C.)</h2>
+      <a href="https://app.genially.com/editor/68bc5a2ab8034b7098c001a7" target="_blank">Bekijk project</a>
     </div>
 
-    <!-- Tijd van Grieken en Romeinen -->
     <div class="tijdvak">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Parthenon_from_west.jpg" alt="Grieks Parthenon">
-      <div class="tijdvak-content">
-        <h2>Tijd van Grieken en Romeinen (3000 v.C. - 500)</h2>
-        <a href="LINK-NAAR-COMIC" target="_blank">Bekijk project</a>
-      </div>
+      <h2>Tijd van Grieken en Romeinen (3000 v.C. - 500)</h2>
+      <a href="LINK-NAAR-COMIC" target="_blank">Bekijk project</a>
     </div>
 
-    <!-- Tijd van monniken en ridders -->
     <div class="tijdvak">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Chateau_de_Chinon_05.jpg" alt="Middeleeuws kasteel">
-      <div class="tijdvak-content">
-        <h2>Tijd van monniken en ridders (500-1000)</h2>
-        <a href="LINK-NAAR-CANVA" target="_blank">Bekijk project</a>
-      </div>
+      <h2>Tijd van monniken en ridders (500-1000)</h2>
+      <a href="LINK-NAAR-CANVA" target="_blank">Bekijk project</a>
     </div>
 
-    <!-- Tijd van steden en staten -->
     <div class="tijdvak">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Bruges_view_from_Belfry.jpg" alt="Middeleeuwse stad">
-      <div class="tijdvak-content">
-        <h2>Tijd van steden en staten (1000-1500)</h2>
-        <a href="LINK-NAAR-PS-BESTAND" target="_blank">Bekijk project</a>
-      </div>
+      <h2>Tijd van steden en staten (1000-1500)</h2>
+      <a href="LINK-NAAR-PS-BESTAND" target="_blank">Bekijk project</a>
     </div>
-
   </main>
 
   <footer>
