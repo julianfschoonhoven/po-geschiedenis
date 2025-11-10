@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Geschiedenis PO - Tijdvakken 1 t/m 4</title>
+  <title>Geschiedenis PO - Tijdvak 1 en 4</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap');
 
@@ -88,14 +88,26 @@
       justify-content: center;
       align-items: center;
       z-index: 1000;
+      overflow-y: auto;
+      padding: 50px 20px;
+      box-sizing: border-box;
+    }
+
+    .overlay-content {
+      background-color: #fff8e7;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
     .overlay img {
-      max-width: 90%;
-      max-height: 90%;
-      border: 5px solid #fff8e7;
+      max-width: 100%;
+      border: 5px solid #8b5e3c;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+      display: block;
+      margin: 0 auto 20px auto;
     }
 
     .overlay:target {
@@ -112,6 +124,17 @@
       font-weight: bold;
     }
 
+    .overlay h3 {
+      margin-top: 0;
+      font-family: 'MedievalSharp', cursive;
+      color: #5a3b24;
+    }
+
+    .overlay p {
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -125,7 +148,7 @@
 <body>
   <header>
     <h1>Geschiedenis PO</h1>
-    <p>Tijdvakken 1 t/m 4</p>
+    <p>Tijdvak 1 en 4</p>
   </header>
 
   <main>
@@ -134,30 +157,54 @@
       <a href="#jagers-en-boeren-afbeelding">Bekijk project</a>
     </div>
 
-    <!-- Popup met afbeelding -->
+    <!-- Popup met afbeelding en uitleg tijdvak 1 -->
     <div id="jagers-en-boeren-afbeelding" class="overlay">
       <a href="#" class="close-btn">&times;</a>
-      <img src="https://go-sparks.com/wp-content/uploads/Tijd-van-jagers-en-boeren-tot-3000-v.C.jpg" alt="Tijd van jagers en boeren">
-    </div>
-
-    <div class="tijdvak">
-      <h2>Tijd van Grieken en Romeinen (3000 v.C. - 500)</h2>
-      <a href="LINK-NAAR-COMIC" target="_blank">Bekijk project</a>
-    </div>
-
-    <div class="tijdvak">
-      <h2>Tijd van monniken en ridders (500-1000)</h2>
-      <a href="LINK-NAAR-CANVA" target="_blank">Bekijk project</a>
+      <div class="overlay-content">
+        <img src="https://go-sparks.com/wp-content/uploads/Tijd-van-jagers-en-boeren-tot-3000-v.C.jpg" alt="Tijd van jagers en boeren">
+        <h3>Tijdvak 1 – Jagers en Boeren (tot 3000 v.C.)</h3>
+        <p>Je ziet dat mensen jagen en vissen, en voedsel verzamelen. Ze gebruiken eenvoudige gereedschappen, zoals gereedschap om te jagen en dingen te maken. Ook zie je dat ze in tijdelijke hutten wonen en in de natuur leven, dus ze trekken nog veel rond. Daarnaast zie je dieren, zoals geiten en honden, wat laat zien dat ze langzaam beginnen met het houden van dieren en boeren. Deze afbeelding laat de belangrijkste dingen zien: jagen, verzamelen, begin van landbouw en hoe mensen toen leefden.</p>
+        <h4>Brainstorm</h4>
+        <p>Ik heb nagedacht over hoe ik alles wat mensen toen deden duidelijk kon laten zien en overzichtelijk kon maken.</p>
+        <h4>Keuzes</h4>
+        <p>Ik heb gekozen om jagen, vissen, verzamelen, gereedschappen, hutten en dieren in de afbeelding te laten zien, zodat alles wat belangrijk is voor dit tijdvak zichtbaar is.</p>
+        <h4>Tevreden/ontevreden</h4>
+        <p>Ik ben tevreden dat alles duidelijk te zien is. Minder tevreden dat sommige dingen een beetje klein zijn in de afbeelding.</p>
+        <h4>Logboek</h4>
+        <p>8/11: ideeën opschrijven, 20 min<br>9/11: afbeelding maken, 1 uur<br>10/11: verslag erbij schrijven, 30 min</p>
+        <h4>Samenhang met andere tijdvakken</h4>
+        <p>Dit laat zien hoe mensen leefden voordat ze dorpen en steden kregen. Het is de basis voor alles wat later in tijdvak 2 en verder komt.</p>
+      </div>
     </div>
 
     <div class="tijdvak">
       <h2>Tijd van steden en staten (1000-1500)</h2>
-      <a href="LINK-NAAR-PS-BESTAND" target="_blank">Bekijk project</a>
+      <a href="#steden-en-staten-afbeelding">Bekijk project</a>
+    </div>
+
+    <!-- Popup met afbeelding en uitleg tijdvak 4 -->
+    <div id="steden-en-staten-afbeelding" class="overlay">
+      <a href="#" class="close-btn">&times;</a>
+      <div class="overlay-content">
+        <img src="https://hetnikz.wordpress.com/wp-content/uploads/2025/11/ongetiteld.png" alt="Tijd van steden en staten">
+        <h3>Tijdvak 4 – Steden en staten (1000–1500)</h3>
+        <p>Deze afbeelding laat zien hoe steden en het dagelijks leven veranderden van de middeleeuwen naar nu. Op het plaatje is één straat verdeeld in twee tijden. Links zie je de moderne wereld met hoge gebouwen, fietsen en mensen in gewone moderne kleding. Rechts zie je de middeleeuwen met oude huizen van steen en hout, mensen in lange jurken en eenvoudige kleding. Op de voorgrond staat een arm persoon met versleten kleren, wat laat zien dat er vroeger veel armoede was en het leven zwaar was. Het laat goed zien hoe steden en het dagelijks leven door de eeuwen heen zijn veranderd.</p>
+        <h4>Brainstorm</h4>
+        <p>Ik heb nagedacht over hoe ik het verschil tussen vroeger en nu kon laten zien in één afbeelding en hoe ik alles overzichtelijk kon maken.</p>
+        <h4>Keuzes</h4>
+        <p>Ik heb gekozen om de straat te verdelen in twee tijden, met moderne gebouwen en mensen links en middeleeuwse huizen en kleding rechts. Het armoedige figuur laat zien hoe zwaar het leven vroeger was. Zo komen de belangrijkste kenmerkende aspecten van dit tijdvak duidelijk naar voren: opkomst van steden, dagelijks leven van de burgerij en sociale verschillen.</p>
+        <h4>Tevreden/ontevreden</h4>
+        <p>Ik ben tevreden dat je direct het verschil tussen toen en nu ziet en de belangrijkste aspecten goed zichtbaar zijn. Minder tevreden dat sommige details van de middeleeuwen kleiner zijn en daardoor minder goed te zien.</p>
+        <h4>Logboek</h4>
+        <p>8/11: ideeën opschrijven en schets maken, 20 min<br>9/11: Photoshop-afbeelding maken, 1 uur<br>10/11: verslag schrijven, 30 min</p>
+        <h4>Samenhang met andere tijdvakken</h4>
+        <p>Dit laat zien hoe steden en het dagelijks leven zich ontwikkelden vanaf de vroege samenleving van jagers en boeren (tijdvak 1) tot aan de georganiseerde steden en staten in de middeleeuwen.</p>
+      </div>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 Geschiedenis PO - Tijdvakken 1 t/m 4
+    &copy; 2025 Geschiedenis PO - Tijdvak 1 en 4
   </footer>
 </body>
 </html>
