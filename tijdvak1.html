@@ -7,9 +7,8 @@
     body { font-family: 'Roboto', sans-serif; background: #fdf6e3; color: #3e2c1c; margin:0; padding:20px; }
     h1 { font-family: 'MedievalSharp', cursive; color: #5a3b24; text-align:center; }
     p,h4 { margin: 10px 0; line-height:1.5; }
-    a { color:#fff; text-decoration:none; font-weight:bold; }
-    .button { display:inline-block; background:#d4a373; padding:10px 20px; border-radius:8px; margin:10px 0; }
-    .button:hover { background:#b97b50; }
+    a.button { display:inline-block; background:#d4a373; padding:10px 20px; border-radius:8px; margin:10px 0; color:#fff; text-decoration:none; font-weight:bold; cursor:pointer; }
+    a.button:hover { background:#b97b50; }
 
     /* Popup */
     .overlay {
@@ -50,6 +49,7 @@
       font-size:2em;
       text-decoration:none;
       font-weight:bold;
+      cursor:pointer;
     }
   </style>
 </head>
@@ -58,7 +58,7 @@
 
   <p>Je ziet dat mensen jagen en vissen, en voedsel verzamelen. Ze gebruiken eenvoudige gereedschappen, zoals gereedschap om te jagen en dingen te maken. Ook zie je dat ze in tijdelijke hutten wonen en in de natuur leven, dus ze trekken nog veel rond. Daarnaast zie je dieren, zoals geiten en honden, wat laat zien dat ze langzaam beginnen met het houden van dieren en boeren. Deze afbeelding laat de belangrijkste dingen zien: jagen, verzamelen, begin van landbouw en hoe mensen toen leefden.</p>
 
-  <a href="#popup1" class="button">Zie kunst</a>
+  <a class="button" id="openPopup1">Zie kunst</a>
 
   <h4>Brainstorm</h4>
   <p>Ik heb nagedacht over hoe ik alles wat mensen toen deden duidelijk kon laten zien en overzichtelijk kon maken.</p>
@@ -80,9 +80,30 @@
   <!-- Popup -->
   <div id="popup1" class="overlay">
     <div class="overlay-content">
-      <a href="#" class="close-btn">&times;</a>
+      <span class="close-btn" id="closePopup1">&times;</span>
       <img src="https://go-sparks.com/wp-content/uploads/Tijd-van-jagers-en-boeren-tot-3000-v.C.jpg" alt="Tijd van jagers en boeren">
     </div>
   </div>
+
+  <script>
+    const popup1 = document.getElementById('popup1');
+    const openBtn1 = document.getElementById('openPopup1');
+    const closeBtn1 = document.getElementById('closePopup1');
+
+    openBtn1.addEventListener('click', () => {
+      popup1.style.display = 'flex';
+    });
+
+    closeBtn1.addEventListener('click', () => {
+      popup1.style.display = 'none';
+    });
+
+    // Klik buiten de inhoud sluit ook popup
+    popup1.addEventListener('click', (e) => {
+      if(e.target === popup1){
+        popup1.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
