@@ -7,9 +7,8 @@
     body { font-family: 'Roboto', sans-serif; background: #fdf6e3; color: #3e2c1c; margin:0; padding:20px; }
     h1 { font-family: 'MedievalSharp', cursive; color: #5a3b24; text-align:center; }
     p,h4 { margin: 10px 0; line-height:1.5; }
-    a { color:#fff; text-decoration:none; font-weight:bold; }
-    .button { display:inline-block; background:#d4a373; padding:10px 20px; border-radius:8px; margin:10px 0; }
-    .button:hover { background:#b97b50; }
+    a.button { display:inline-block; background:#d4a373; padding:10px 20px; border-radius:8px; margin:10px 0; color:#fff; text-decoration:none; font-weight:bold; cursor:pointer; }
+    a.button:hover { background:#b97b50; }
 
     /* Popup */
     .overlay {
@@ -50,6 +49,7 @@
       font-size:2em;
       text-decoration:none;
       font-weight:bold;
+      cursor:pointer;
     }
   </style>
 </head>
@@ -58,7 +58,7 @@
 
   <p>Deze afbeelding laat zien hoe steden en het dagelijks leven veranderden van de middeleeuwen naar nu. Op het plaatje is één straat verdeeld in twee tijden. Links zie je de moderne wereld met hoge gebouwen, fietsen en mensen in gewone moderne kleding. Rechts zie je de middeleeuwen met oude huizen van steen en hout, mensen in lange jurken en eenvoudige kleding. Op de voorgrond staat een arm persoon met versleten kleren, wat laat zien dat er vroeger veel armoede was en het leven zwaar was. Het laat goed zien hoe steden en het dagelijks leven door de eeuwen heen zijn veranderd.</p>
 
-  <a href="#popup4" class="button">Zie kunst</a>
+  <a class="button" id="openPopup4">Zie kunst</a>
 
   <h4>Brainstorm</h4>
   <p>Ik heb nagedacht over hoe ik het verschil tussen vroeger en nu kon laten zien in één afbeelding en hoe ik alles overzichtelijk kon maken.</p>
@@ -80,9 +80,30 @@
   <!-- Popup -->
   <div id="popup4" class="overlay">
     <div class="overlay-content">
-      <a href="#" class="close-btn">&times;</a>
+      <span class="close-btn" id="closePopup4">&times;</span>
       <img src="https://hetnikz.wordpress.com/wp-content/uploads/2025/11/ongetiteld.png" alt="Tijd van steden en staten">
     </div>
   </div>
+
+  <script>
+    const popup4 = document.getElementById('popup4');
+    const openBtn4 = document.getElementById('openPopup4');
+    const closeBtn4 = document.getElementById('closePopup4');
+
+    openBtn4.addEventListener('click', () => {
+      popup4.style.display = 'flex';
+    });
+
+    closeBtn4.addEventListener('click', () => {
+      popup4.style.display = 'none';
+    });
+
+    // Klik buiten de inhoud sluit popup
+    popup4.addEventListener('click', (e) => {
+      if(e.target === popup4){
+        popup4.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
